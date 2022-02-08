@@ -11,7 +11,7 @@ const eqArrays = function (actual, expected) {
   }
 };
 
-const eqArrays = function (actual, expected) {
+const assertEqArrays = function (actual, expected) {
   let eqArraysResult = eqArrays(actual, expected);
 
   if (eqArraysResult === true) {
