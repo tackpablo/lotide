@@ -36,7 +36,7 @@ const middle = function (array) {
       array[array.length / 2],
     ]);
   } else {
-    // odd arrays
+    // cases where the index is odd
     return (arrayResult = array[(array.length - 1) / 2]);
   }
 };
