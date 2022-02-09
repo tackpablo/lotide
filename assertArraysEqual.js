@@ -20,3 +20,5 @@ const assertEqArrays = function (actual, expected) {
     console.log(`🛑🛑Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+// assertEqArrays([1, 2, 3], [1, 2, 3, 4]);
