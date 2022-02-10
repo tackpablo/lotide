@@ -37,9 +37,9 @@ const eqObjects = function (object1, object2) {
 
   //loop through keys
   for (key of keys1) {
-    // check if types are the same (both objects are arrays)
+    // check if values of both objects have an array (nested)
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-      // return array checks
+      // return array check function to see if arrays are matching (nested arrays)
       return eqArrays(object1[key], object2[key]);
     } else {
       // if any values do not match
