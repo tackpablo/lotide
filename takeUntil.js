@@ -27,6 +27,7 @@ const takeUntil = function (array, callback) {
   // loop through elements in array
   for (const el in array) {
     // if element of array meets condition of callback function
+    console.log(el);
     if (callback(array[el])) {
       // result will be to slice from that point to the element
       result = array.slice(0, el);

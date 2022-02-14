@@ -1,3 +1,3 @@
-const assertEqArrays = require("../assertArraysEqual");
+const assertArraysEqual = require("../assertArraysEqual");
 
-console.log(assertEqArrays([1, 2, 3], [1, 2, 3, 4]));
+console.log(assertArraysEqual([1, 2, 3], [1, 2, 3, 4]));
