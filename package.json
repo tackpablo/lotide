@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@tackpablo/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "This library was published for learning purposes. It is _not_ intended for use in production-grade software. This project was created and published by me as part of my learnings at Lighthouse Labs.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,8 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/tackpablo/lotide.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "lotide",
+    "lodash",
+    "student"
+  ],
+  "author": "Pablo Tack",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tackpablo/lotide/issues"
