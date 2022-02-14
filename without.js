@@ -1,25 +1,6 @@
-const eqArrays = function (actual, expected) {
-  if (actual.length !== expected.length) {
-    return false;
-  } else {
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
+const eqArrays = require("./eqArrays");
 
-const assertEqArrays = function (actual, expected) {
-  let eqArraysResult = eqArrays(actual, expected);
-
-  if (eqArraysResult === true) {
-    console.log(`✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertArraysEq = require("./assertArraysEqual");
 
 const without = function (list, filter) {
   let filteredList = [];
@@ -32,11 +13,13 @@ const without = function (list, filter) {
   return filteredList;
 };
 
-console.log(without([1, 2, 3], [1])); // => [1, 2]
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
-console.log(without(["1", "2", "3"], [2, 1, "3"])); // => ["1", "2"]
+module.exports = without;
 
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertEqArrays(words, ["hello", "world", "lighthouse"]);
+// console.log(without([1, 2, 3], [1])); // => [1, 2]
+// console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
+// console.log(without(["1", "2", "3"], [2, 1, "3"])); // => ["1", "2"]
+
+// const words = ["hello", "world", "lighthouse"];
+// without(words, ["lighthouse"]); // no need to capture return value for this test case
+// // Make sure the original array was not altered by the without function
+// assertArraysEq(words, ["hello", "world", "lighthouse"]);

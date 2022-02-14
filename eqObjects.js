@@ -1,23 +1,6 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require("./assertEqual");
 
-const eqArrays = function (actual, expected) {
-  if (actual.length !== expected.length) {
-    return false;
-  } else {
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
+const eqArrays = require("./eqArrays");
 
 // TEST CODE
 // assertEqual("Bootcamp", "Bootcamp");
@@ -56,6 +39,8 @@ const eqObjects = function (object1, object2) {
   }
   return true;
 };
+
+module.exports = eqObjects;
 
 // const ab = { a: "1", b: "2" };
 // const ba = { b: "2", a: "1" };

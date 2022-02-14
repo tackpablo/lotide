@@ -11,5 +11,3 @@ const assertArraysEq = function (actual, expected) {
 };
 
 module.exports = assertArraysEq;
-
-// assertEqArrays([1, 2, 3], [1, 2, 3, 4]);

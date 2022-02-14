@@ -1,25 +1,6 @@
-const eqArrays = function (actual, expected) {
-  if (actual.length !== expected.length) {
-    return false;
-  } else {
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
+const eqArrays = require("./eqArrays");
 
-const assertEqArrays = function (actual, expected) {
-  let eqArraysResult = eqArrays(actual, expected);
-
-  if (eqArraysResult === true) {
-    console.log(`✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertArraysEq = require("./assertArraysEqual");
 
 const takeUntil = function (array, callback) {
   // variable to capture end result
@@ -37,22 +18,24 @@ const takeUntil = function (array, callback) {
   return result;
 };
 
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, (x) => x < 0);
-assertEqArrays(results1, [1, 2, 5, 7, 2]); // [ 1, 2, 5, 7, 2 ]
+module.exports = takeUntil;
 
-console.log("---");
+// const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+// const results1 = takeUntil(data1, (x) => x < 0);
+// assertArraysEq(results1, [1, 2, 5, 7, 2]); // [ 1, 2, 5, 7, 2 ]
 
-const data2 = [
-  "I've",
-  "been",
-  "to",
-  "Hollywood",
-  ",",
-  "I've",
-  "been",
-  "to",
-  "Redwood",
-];
-const results2 = takeUntil(data2, (x) => x === ",");
-assertEqArrays(results2, ["I've", "been", "to", "Hollywood"]); // [ 'I\'ve', 'been', 'to', 'Hollywood' ]
+// console.log("---");
+
+// const data2 = [
+//   "I've",
+//   "been",
+//   "to",
+//   "Hollywood",
+//   ",",
+//   "I've",
+//   "been",
+//   "to",
+//   "Redwood",
+// ];
+// const results2 = takeUntil(data2, (x) => x === ",");
+// assertArraysEq(results2, ["I've", "been", "to", "Hollywood"]); // [ 'I\'ve', 'been', 'to', 'Hollywood' ]
