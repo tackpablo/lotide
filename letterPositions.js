@@ -1,7 +1,3 @@
-const eqArrays = require("./eqArrays");
-
-const assertArraysEq = require("./assertArraysEqual");
-
 const letterPositions = function (sentence) {
   // container for results letter positions
   const results = {};

@@ -1,12 +1,4 @@
-const assertEqual = require("./assertEqual");
-
 const eqArrays = require("./eqArrays");
-
-// TEST CODE
-// assertEqual("Bootcamp", "Bootcamp");
-// assertEqual("Lighthouse Labs", "Bootcamp");
-// assertEqual(1, 1);
-// assertEqual(1, 2);
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!

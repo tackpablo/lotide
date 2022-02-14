@@ -1,11 +1,3 @@
-const assertEqual = require("./assertEqual");
-
-// TEST CODE
-// assertEqual("Bootcamp", "Bootcamp");
-// assertEqual("Lighthouse Labs", "Bootcamp");
-// assertEqual(1, 1);
-// assertEqual(1, 2);
-
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
 const countOnly = function (allItems, itemsToCount) {

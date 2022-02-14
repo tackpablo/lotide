@@ -1,7 +1,3 @@
-const eqArrays = require("./eqArrays");
-
-const assertArraysEq = require("./assertArraysEqual");
-
 const takeUntil = function (array, callback) {
   // variable to capture end result
   let result = [];

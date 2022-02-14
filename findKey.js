@@ -1,5 +1,3 @@
-const assertEqual = require("./assertEqual");
-
 const findKey = function (object, callback) {
   // variable to capture end result
   let result = "";

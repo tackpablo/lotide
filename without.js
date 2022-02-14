@@ -1,7 +1,3 @@
-const eqArrays = require("./eqArrays");
-
-const assertArraysEq = require("./assertArraysEqual");
-
 const without = function (list, filter) {
   let filteredList = [];
   for (let i = 0; i < list.length; i++) {
